@@ -269,26 +269,3 @@ func logErr(e error) error {
 
 	return nil
 }
-
-// 1.	check if output folder not exists
-// 	1.1.	TRUE: create it
-// 	1.2.	FALSE: check if the folder is empty
-// 		1.2.1.	TRUE: carry on
-// 		1.2.2.	FALSE: notify user and ask for y/n input (default n)
-// 			1.2.2a	YES: carry on
-// 			1.2.2b	NO: "Application exited by user.", return 0, exit
-
-// 2.	create go "dict" called files - {key: filehash, value: filepath}
-// 2a.	Walk target directory
-// 	2a.1.	check if folder
-// 		2a.1.1.	TRUE: skip
-// 		2a.1.2.	FALSE: get file hash
-// 			2a.1.2a.	check if phlats[hash] exists
-// 				> TRUE: log filename in skip.log with "duplicate file hash" as reason
-// 				> FALSE: store in phlats[] and copy to <output directory>; log filename in phlat.log
-//
-// TODO: add logging for skip.log, phlat.log, error.log (?)
-// TODO: double check file hashes - 2 identical files should have the same hash [x]
-// TODO add check for filename collisions on copy and a handler e.g. file(1), file(2) etc. - can keep a running map[string]int for counter
-//
-// Future: add flag for in-place flattening
