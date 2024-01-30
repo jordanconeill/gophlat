@@ -50,7 +50,7 @@ Address issues listed above.
 Improve the format of this file to be more useful, more easily readable, and more practical for use as an input to other tools (e.g. grep, excel/LibreOffice calc)
 
 ### phlat.log
-Admittedly, this log file is essentially useless in it's current form. It saves all the time of a single `ls` command. Future improvements could include reporting on time to execute, number of bytes copied, number of bytes skipped, size of source, etc.
+Admittedly, this log file is essentially useless in it's current form. It saves all the time of a single `ls` command. Future improvements could include explicitly reporting on time to execute, number of bytes copied, number of bytes skipped, size of source, etc.
 
 ### In-Place Flattening
 Add option for flattening a folder in-place.
@@ -60,3 +60,6 @@ Kinda slow, could be faster...
 
 ### Verbose mode
 Kinda quiet, could be louder... Some "TEST" prints are still in the code (commented out) for troubleshooting.
+
+## Disclaimer
+This is my first Golang project, and my first "real" project on GitHub. I'm sure there are some best practices, both in the source code and in the github project setup, that I have missed. Please feel free to submit an Issue for any feedback, even if it is technically not an "Issue".
